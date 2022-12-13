@@ -12,12 +12,12 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@master
         with:
           node-version: "14.x"
 
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@master
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}

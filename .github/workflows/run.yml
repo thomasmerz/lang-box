@@ -9,7 +9,7 @@ jobs:
   run:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Setup Node
         uses: actions/setup-node@v5

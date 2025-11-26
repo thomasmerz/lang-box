@@ -1,0 +1,18 @@
+# taken from: https://github.com/gensecaihq/Shai-Hulud-2.0-Detector
+name: Shai-Hulud 2.0 Security Check
+
+on:
+  workflow_dispatch:
+#  push:
+#    branches: [main, master]
+#  pull_request:
+#    branches: [main, master]
+
+jobs:
+  security-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gensecaihq/Shai-Hulud-2.0-Detector@v1
+        with:
+          fail-on-critical: true
